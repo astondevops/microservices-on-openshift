@@ -40,8 +40,8 @@ class EmailResource(object):
         server.sendmail(os.getenv('GMAIL_USERNAME', 'node2test@gmail.com'), email_req['to'], msg)
         server.quit()
         config = {
-          'user': os.getenv('MYSQL_USER', 'root'),
-          'password': os.getenv('MYSQL_PASSWORD', ''),
+          'user': os.getenv('MYSQL_USER', 'app_user'),
+          'password': os.getenv('MYSQL_PASSWORD', 'password'),
           'host': os.getenv('MYSQL_SERVICE_HOST', 'localhost'),
           'db': os.getenv('MYSQL_DATABASE', 'microservices'),
           'cursorclass': pymysql.cursors.DictCursor,
